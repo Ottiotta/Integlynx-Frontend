@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.message {
+  background-color: #f4f4f4;
+  border: 1vmin solid #ddd;
+  padding: 3vmin;
+  margin: 2vmin;
+  overflow-wrap: break-word;
+  text-shadow: 3px 3px 3px #bbbbbb;
+}
+
+#message-input {
+  width: 60vw;
+  padding: 1vmax;
+  margin: 1vmax;
+  font-size: 2vh;
+  background-color: #ffc2c2;
+  border-color: red;
+  border-radius: 15px;
+  border-style: solid;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  bottom: 20%;
+  right: 30%;
+  overflow: auto;
+}
+
+/* When the input field is empty and not in focus, let the placeholder text show */
+#message-input[contentEditable=true]:empty:not(:focus):before {
+  content: attr(placeholder)
+}
+
+#send-btn {
+  padding: 1vmax;
+  margin: 1vmax;
+  width: 10vw;
+  font-size: 2vw;
+  color: orange;
+  background-color: blue;
+  border-radius: 15%;
+  border-style: solid;
+  position: absolute;
+  left: 80%;
+  top: 0%;
+  bottom: 20%;
+  right: 0%;
+}
+
+#delete-btn {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+#send-btn:hover {
+  animation-name: sendhover;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes sendhover {
+  0% {
+    background-color: #6400ff;
+    color: #9ba500;
+    border-color: #ff0000;
+  }
+
+  50% {
+    background-color: #0064ff;
+    color: #ff4100;
+    border-color: #00feff;
+  }
+
+  100% {
+    background-color: #6400ff;
+    color: #9ba500;
+    border-color: #ff0100;
+  }
+}
+
+.prc2img {
+  width: 1.5vw;
+}
+
+.sidenav {
+  border: 1mm solid green;
+  padding: 0vw;
+  margin: 0%;
+  height: 100%;
+  width: 19vw;
+  position: fixed;
+  z-index: 1;
+  /* Controls stacking order. Elements of higher number will appear on top. Default 0.*/
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+.sidenav button {
+  border: 0.5vmin outset green;
+  padding: 0.3vw;
+  font-size: 2vw;
+  border-radius: 25%;
+  color: #e7e7e7;
+  background-color: #000000;
+  display: block;
+  margin: 0.3vw;
+}
+
+.sidenav button:hover {
+  color: #ffffff;
+  border-color: #000000;
+  border-style: double;
+}
+
+main {
+  position: fixed;
+  left: 20vw;
+  top: 0%;
+  bottom: 10vh;
+  right: 0%;
+  overflow: auto;
+}
+
+.msgbar {
+  position: fixed;
+  left: 20vw;
+  top: 85vh;
+  bottom: 0%;
+  right: 0%;
+  background-color: #9900e0;
+}
+
+.msg_id {
+  color: #cccccc;
+  display: inline;
+  text-shadow: 3px 3px 3px #dddddd;
+}
+
+.msg_id:hover {
+  color: #999999;
+  text-shadow: -1px -1px 0px #999999;
+}
+
+.msg_text {
+  display: inline;
+}
+
+.message-button {
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.message-button.delete-btn {
+  border: double red 5px;
+  color: #771111;
+}
+
+.message-button.delete-btn:hover {
+  border: double #FF2222 5px;
+  background-color: #FFCCCC;
+}
+
+.message-button.edit-btn {
+  border: double blue 5px;
+  color: #111177;
+}
+
+.message-button.edit-btn:hover {
+  border: double #2222FF 5px;
+  background-color: #CCCCFF;
+}
+
+.message-button.cancel-btn {
+  border: double red 5px;
+  color: #771111;
+}
+
+.message-button.cancel-btn:hover {
+  border: double #FF2222 5px;
+  background-color: #FFCCCC;
+}
+
+.message-button.send-edit-btn {
+  border: double blue 5px;
+  color: #111177;
+}
+
+.message-button.send-edit-btn:hover {
+  border: double #2222FF 5px;
+  background-color: #CCCCFF;
+}
+
+*[name=message-content] {
+  margin: 3px;
+  padding: 6px;
+}
+
+*[contentEditable=true][name=message-content] {
+  background-color: #888888;
+  border: solid #444444 3px;
+  border-radius: 5px;
+  padding: 3px;
+}

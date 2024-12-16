@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Integlynx</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="Integlynx_Lynx.jpg" rel="shortcut icon" type="image/jpg" />
+</head>
+
+<body>
+  <div class="sidenav">
+    <nav>
+      <ul id="sidebar-menu">
+        <!-- Dynamically generated sidebar items will appear here -->
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section id="chat-window">
+      <!-- Chat messages will appear here -->
+    </section>
+  </main>
+  <div class="msgbar">
+    <div onkeydown="handleEnterPress(this, event)" id="message-input" placeholder="Type your message here"
+      contenteditable="true"></div>
+    <button id="send-btn" onclick="send()">
+      <img class="prc2img" src="https://cdn-icons-png.flaticon.com/512/561/561226.png" />
+      Send
+    </button>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
